@@ -1,2 +1,2 @@
 # DCDet
-small object detection
+We will upload the code later.
