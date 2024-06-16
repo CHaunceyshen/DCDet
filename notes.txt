@@ -1,0 +1,6 @@
+Notes:
+(1) The initial motivation for our correlation loss was to take into account the unique perspective of remote sensing images, where the ratio of bounding boxes of different categories may have their certain correlated information. We then got an idea similar to [1]. What's different is that: (1) when obtaining the IoU, we employed a rotated rbbox_overlaps method, which takes parameters of five dimensions to calculate the IoU with orientation angle, and furthermore, (2) our classification loss and regression loss are CrossEntropyLoss and SmoothL1Loss, respectively, which is different to [1].
+(2) The correct reference of [53] in the manuscript is [2]. 
+ 
+[1] Kahraman, Oksuz, Kalkan, Akbas, “Correlation loss: enforcing correlation between classification and localization”, 37th AAAI Conference on Artificial Intelligence (AAAI), 2023.  https://dl.acm.org/doi/10.1609/aaai.v37i1.25190
+[2] Oksuz, Cam, Kalkan, Akbas, “A Ranking-based, Balanced Loss Function Unifying Classification and Localisation in Object Detection,” NeurIPS, 2020.
