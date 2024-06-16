@@ -1,0 +1,39 @@
+Collections:
+- Name: dcdet
+  Metadata:
+    Training Data: DOTAv1.0
+    Training Techniques:
+      - SGD with Momentum
+      - Weight Decay
+    Training Resources: 1x GeForce GTX 1080 Ti
+    Architecture:
+      - ResNet
+  Paper:
+    URL: 
+    Title: 'Dynamic sensing and correlation loss detector for small object detection in remote sensing images'
+  README: configs/dcdet/README.md
+
+Models:
+  - Name: dcdet_sods_corr_ss_r50_fpn_1x_dota_le90
+    In Collection: oriented_rcnn
+    Config: configs/dcdet/dcdet_sods_corr_ss_r50_fpn_1x_dota_le90.py
+    Metadata:
+      Training Data: DOTAv1.0
+    Results:
+      - Task: Oriented Object Detection
+        Dataset: DOTAv1.0
+        Metrics:
+          mAP: 75.63
+    Weights: 
+
+  - Name: oriented_rcnn_r50_fpn_1x_dota_le90
+    In Collection: oriented_rcnn
+    Config: configs/oriented_rcnn/oriented_rcnn_r50_fpn_1x_dota_le90.py
+    Metadata:
+      Training Data: DOTAv1.0
+    Results:
+      - Task: Oriented Object Detection
+        Dataset: DOTAv1.0
+        Metrics:
+          mAP: 75.69
+    Weights: 
